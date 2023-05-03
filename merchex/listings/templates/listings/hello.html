@@ -1,0 +1,9 @@
+
+
+    <p>Mes groupes préférés sont {{bands | length}}:</p>
+    <ul>
+      {% for band in bands %}
+      <li>{{band.name}}</li>
+      {% endfor %}
+    </ul>
+
