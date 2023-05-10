@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.shortcuts import render
 from listings.models import Band
-from listings.models import Listing
+#from listings.models import Band
 
 
 def hello(request):
