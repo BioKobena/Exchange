@@ -1,7 +1,13 @@
-{% extends 'listings/base.html' %}
+{% load static %}
 
-{% block content %}
+<html>
+    <head><title>Merchex</title></head>
+    <!-- <link rel="stylesheet" href="../../static/listings/styles.css" /> -->
+    <link rel="stylesheet" href="{% static 'listings/styles.css'}">
+    <body>
+        <h1>Hello Django</h1>
+        {%block content %}
 
-<h1>Hello Django !</h1>
-
-{% endblock %}
+        {%endblock%}
+    </body>
+</html>

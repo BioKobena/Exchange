@@ -1,5 +1,6 @@
 
-
+{% extends 'listings/base.html' %}
+{%block content %}
     <p>Mes groupes préférés sont {{bands | length}}:</p>
     <ul>
       {% for band in bands %}
@@ -7,3 +8,5 @@
       {% endfor %}
     </ul>
 
+
+{% endblock %}
