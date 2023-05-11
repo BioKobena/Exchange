@@ -4,6 +4,10 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 # Create your models here.
 class Band(models.Model):
+    
+
+    def __str__(self):
+        return f'{self.name}'
     class Genre(models.TextChoices):
         HIP_HOP = "HH"
         SYNTH_POP = "SP"
