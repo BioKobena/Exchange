@@ -20,4 +20,13 @@ class Band(models.Model):
     year_formed = models.fields.IntegerField(validators=[MinValueValidator(1900), MaxValueValidator(2021)])
     active = models.fields.BooleanField(default=True)
     official_homepage = models.fields.URLField(null=True, blank=True)
+    like_new = models.fields.BooleanField(default=False)
     
+
+
+class Listings(models.Model):
+    title = models.fields.CharField(max_length=100)
+    description = models.fields.CharField(max_length=1000)
+    sold = models.fields.BooleanField(default=False)
+    year_listing = models.fields.IntegerField(validators=[MinValueValidator(2022), MaxValueValidator(2023)])
+    band = models.ForeignKey(Band, null=True, on_delete=models.SET_NULL)
